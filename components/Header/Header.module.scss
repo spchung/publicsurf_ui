@@ -11,10 +11,10 @@
 }
 
 .menu {
-  margin-top: -8px !important;
+  margin-top: 8px !important;
   @apply overflow-hidden rounded-md bg-white py-1 shadow-md z-[3];
 }
 
 .menuItem {
-  @apply cursor-pointer px-3 py-2 hover:bg-cyan-200;
+  @apply cursor-pointer px-3 py-2 hover:bg-gray-100;
 }

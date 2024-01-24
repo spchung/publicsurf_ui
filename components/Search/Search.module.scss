@@ -1,0 +1,15 @@
+.searchContainer {
+  @apply mb-4 flex items-center justify-center;
+}
+
+.searchCondition {
+  @apply mr-2;
+}
+
+.searchBtn {
+  @apply h-14 px-8 text-slate-900 border-[#bdbdbd];
+  &:hover {
+    background-color: inherit;
+    border-color: #424242;
+  }
+}

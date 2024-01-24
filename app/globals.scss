@@ -15,6 +15,10 @@ body {
   overflow: hidden;
 }
 
+.title {
+  @apply my-6 text-center font-bold;
+}
+
 .main {
   width: 100%;
   height: calc(100% - 56px);

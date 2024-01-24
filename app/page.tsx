@@ -1,5 +1,7 @@
 'use client';
 import Header from '@/components/Header';
+import Search from '@/components/Search'
+import Typography from '@mui/material/Typography';
 import Photos from '@/components/Photos';
 
 const photos = [
@@ -82,6 +84,8 @@ export default function Home() {
     <>
       <Header></Header>
       <div className="main">
+        <Typography variant="h4" className="title">Find Your Photos!</Typography>
+        <Search></Search>
         <Photos items={photos}></Photos>
       </div>
     </>
