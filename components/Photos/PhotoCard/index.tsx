@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import Box from '@mui/material/Box';
+import Avatar from '@mui/material/Avatar';
 import { PhotoListItem } from '../types';
+import style from './PhotoCard.module.scss';
 
-export default function PhotoCard({ id, url, name }: PhotoListItem) {
+export default function PhotoCard({ id, url, name, userImg }: PhotoListItem) {
   return (
     <Link href={`/photo/${id}`}>
       <ImageListItem>
@@ -13,7 +16,13 @@ export default function PhotoCard({ id, url, name }: PhotoListItem) {
           alt="poster"
           loading="lazy"
         />
-        <ImageListItemBar position="below" title={name} />
+        <Box className={style.photoFooter}>
+          <div className={style.userInfo}>
+            <Avatar alt={name} src={userImg} className={style.userInfo_avatar} />
+            <span>{name}</span>
+          </div>
+          <div>烏石港北提</div>
+        </Box>
       </ImageListItem>
     </Link>
   );

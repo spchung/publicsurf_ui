@@ -5,7 +5,6 @@ import PhotoList from './PhotoList';
 import { PhotoList as IPhotoList } from './types';
 
 export default function Photos({ items }: IPhotoList) {
-  const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(false);
   return (
     <>
