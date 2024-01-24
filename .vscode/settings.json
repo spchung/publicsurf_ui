@@ -1,5 +1,7 @@
 {
-  "scss.lint.unknownAtRules": "ignore",
+  "files.associations": {
+    "*.scss": "tailwindcss"
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },

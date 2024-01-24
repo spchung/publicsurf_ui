@@ -81,7 +81,7 @@ export default function Home() {
   return (
     <>
       <Header></Header>
-      <div className="main container mx-auto">
+      <div className="main">
         <Photos items={photos}></Photos>
       </div>
     </>

@@ -1,5 +1,5 @@
 .photoFooter {
-  @apply mt-1 flex items-center justify-between;
+  @apply mb-4 mt-1 flex items-center justify-between text-sm;
 }
 
 .userInfo {
@@ -7,7 +7,7 @@
 }
 
 .userInfo_avatar {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   margin-right: 8px;
 }

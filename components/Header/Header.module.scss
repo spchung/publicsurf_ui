@@ -1,0 +1,20 @@
+.header {
+  @apply fixed top-0 z-[2] w-full border-b border-neutral-300 bg-inherit bg-slate-50 p-2 lg:px-8 lg:py-3;
+}
+
+.nav {
+  @apply flex items-center justify-between;
+}
+
+.menuButton {
+  @apply rounded-lg p-2 hover:shadow-md;
+}
+
+.menu {
+  margin-top: -8px !important;
+  @apply overflow-hidden rounded-md bg-white py-1 shadow-md z-[3];
+}
+
+.menuItem {
+  @apply cursor-pointer px-3 py-2 hover:bg-cyan-200;
+}
