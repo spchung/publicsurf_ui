@@ -3,13 +3,12 @@
 }
 
 .searchCondition {
-  @apply mr-2;
+  @apply mr-2 w-full;
 }
 
 .searchBtn {
-  @apply h-14 px-8 text-slate-900 border-[#bdbdbd];
+  @apply h-14 border-0 bg-gray-700 px-8 text-slate-200;
   &:hover {
-    background-color: inherit;
-    border-color: #424242;
+    @apply border-0 bg-slate-800;
   }
 }

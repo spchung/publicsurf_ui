@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Grid from '@mui/system/Unstable_Grid';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import dayjs, { Dayjs } from 'dayjs';
@@ -38,15 +37,13 @@ const options = [
 
 export default function Search() {
   const [location, setLocation] = useState(options[0]);
-  const [date, setDate] = useState<Dayjs | null>(dayjs(new Date()));
+  const [date, setDate] = useState<number>(Date.now());
   const [timeSlot, setTimeSlot] = useState('am');
-
   const handleLocationChange = (event: any, value: any) => {
     setLocation(value);
   };
   const handleDateChange = (value: Dayjs | null) => {
-    console.log(value);
-    setDate(value);
+    setDate(value?.valueOf() || Date.now());
   };
   const handleTimeSlotChange = (event: SelectChangeEvent) => {
     setTimeSlot(event.target.value as string);
@@ -66,11 +63,10 @@ export default function Search() {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DatePicker
           className={style.searchCondition}
-          value={date}
+          value={dayjs(date)}
           onChange={handleDateChange}
           label="Date"
           format="YYYY-MM-DD"
-          sx={{ width: '100%' }}
         ></DatePicker>
       </LocalizationProvider>
       <FormControl className={style.searchCondition} fullWidth>
@@ -86,7 +82,7 @@ export default function Search() {
           <MenuItem value={'PM'}>下午</MenuItem>
         </Select>
       </FormControl>
-      <Button variant="outlined" size="large" color='primary' className={style.searchBtn}>
+      <Button variant="outlined" size="large" color="primary" className={style.searchBtn}>
         Search
       </Button>
     </div>
