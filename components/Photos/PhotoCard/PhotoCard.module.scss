@@ -1,9 +1,32 @@
+.photoMain {
+  @apply relative overflow-hidden rounded-md;
+}
+
+.photoHoverContainer {
+  @apply absolute bottom-0 left-0 flex w-full items-center justify-between bg-black/40 p-2;
+}
+
+.priceNum {
+  @apply font-semibold text-slate-50;
+}
+
+.addToCart {
+  @apply text-slate-50;
+  &:hover {
+    @apply bg-slate-300/30;
+  }
+}
+
 .photoFooter {
-  @apply mb-4 mt-1 flex items-center justify-between text-sm;
+  @apply mb-4 mt-1 text-sm;
+}
+
+.photoFooterInfo {
+  @apply mt-2 flex items-center justify-between;
 }
 
 .userInfo {
-  @apply flex;
+  @apply flex items-center;
 }
 
 .userInfo_avatar {
