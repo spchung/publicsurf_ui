@@ -29,29 +29,28 @@ export default function PhotoCard({ id, url, name, userImg }: PhotoListItem) {
 
   return (
     <Link href={`/photo/${id}`}>
-      <ImageListItem>
-        <div
-          className={style.photoMain}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <img
-            srcSet={`${url}?w=248&fit=crop&auto=format&dpr=2 2x`}
-            src={`${url}?w=248&fit=crop&auto=format`}
-            alt="poster"
-            loading="lazy"
-          />
-          <div className={style.photoHoverContainer} style={photoHoverContainerStyle}>
-            <span className={style.priceNum}>$100</span>
-            <IconButton
-              size="small"
-              className={style.addToCart}
-              onClick={handleAddToCart}
-              onKeyDown={handleAddToCart}
-            >
-              <AddShoppingCartIcon fontSize="inherit" />
-            </IconButton>
-          </div>
+      <ImageListItem
+        className={style.photoMain}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <img
+          className={style.photo}
+          srcSet={`${url}?w=248&fit=crop&auto=format&dpr=2 2x`}
+          src={`${url}?w=248&fit=crop&auto=format`}
+          alt="poster"
+          loading="lazy"
+        />
+        <div className={style.photoHoverContainer} style={photoHoverContainerStyle}>
+          <span className={style.priceNum}>$100</span>
+          <IconButton
+            size="small"
+            className={style.addToCart}
+            onClick={handleAddToCart}
+            onKeyDown={handleAddToCart}
+          >
+            <AddShoppingCartIcon fontSize="inherit" />
+          </IconButton>
         </div>
         <div className={style.photoFooter}>
           <div className={style.photoFooterInfo}>

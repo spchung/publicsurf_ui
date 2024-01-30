@@ -1,9 +1,13 @@
 .photoMain {
-  @apply relative overflow-hidden rounded-md;
+  @apply relative overflow-hidden;
+}
+
+.photo {
+  @apply rounded-md;
 }
 
 .photoHoverContainer {
-  @apply absolute bottom-0 left-0 flex w-full items-center justify-between bg-black/40 p-2;
+  @apply absolute bottom-11 left-0 flex w-full items-center justify-between rounded-b-md bg-black/40 p-2;
 }
 
 .priceNum {
