@@ -1,0 +1,9 @@
+.folderFooter {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  line-height: 1.2rem;
+  word-break: break-all;
+  @apply overflow-hidden px-2 text-center;
+}
